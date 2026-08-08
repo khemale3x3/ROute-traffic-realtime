@@ -1,0 +1,22 @@
+{
+  "name": "ntar-flow-collector",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "NetFlow/sFlow/IPFIX UDP collector that forwards normalized flows to the Network Traffic Analyzer ingest API.",
+  "bin": {
+    "ntar-collector": "collector.mjs",
+    "ntar-capture": "capture.mjs"
+  },
+  "scripts": {
+    "start": "node --env-file=.env collector.mjs",
+    "capture": "node --env-file=.env capture.mjs"
+  },
+  "dependencies": {
+    "cap": "^0.2.1",
+    "ws": "^8.18.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
